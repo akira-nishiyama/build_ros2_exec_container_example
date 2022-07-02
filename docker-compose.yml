@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  talker:
+    build: ./context
+    image: py_pubsub:latest
+    command: ros2 run py_pubsub talker
+  listener:
+    build: ./context
+    image: py_pubsub:latest
+    command: ros2 run py_pubsub listener
